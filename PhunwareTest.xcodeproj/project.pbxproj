@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		9669E9D11AE54C6D008325C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669E9D01AE54C6D008325C4 /* main.m */; };
-		9669E9D41AE54C6D008325C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669E9D31AE54C6D008325C4 /* AppDelegate.m */; };
-		9669E9D71AE54C6D008325C4 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669E9D61AE54C6D008325C4 /* MasterViewController.m */; };
-		9669E9DA1AE54C6D008325C4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669E9D91AE54C6D008325C4 /* DetailViewController.m */; };
 		9669E9DD1AE54C6E008325C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9669E9DB1AE54C6E008325C4 /* Main.storyboard */; };
 		9669E9DF1AE54C6E008325C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9669E9DE1AE54C6E008325C4 /* Images.xcassets */; };
 		9669E9E21AE54C6E008325C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9669E9E01AE54C6E008325C4 /* LaunchScreen.xib */; };
 		9669E9EE1AE54C6E008325C4 /* PhunwareTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669E9ED1AE54C6E008325C4 /* PhunwareTestTests.m */; };
+		9669E9FB1AE54D68008325C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669E9FA1AE54D68008325C4 /* AppDelegate.m */; };
+		9669EA001AE54D83008325C4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669E9FD1AE54D83008325C4 /* DetailViewController.m */; };
+		9669EA011AE54D83008325C4 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669E9FF1AE54D83008325C4 /* MasterViewController.m */; };
+		9669EA061AE54EB0008325C4 /* afnetworking in Resources */ = {isa = PBXBuildFile; fileRef = 9669EA051AE54EB0008325C4 /* afnetworking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,18 +32,19 @@
 		9669E9CB1AE54C6D008325C4 /* PhunwareTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhunwareTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9669E9CF1AE54C6D008325C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9669E9D01AE54C6D008325C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9669E9D21AE54C6D008325C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9669E9D31AE54C6D008325C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9669E9D51AE54C6D008325C4 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		9669E9D61AE54C6D008325C4 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		9669E9D81AE54C6D008325C4 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		9669E9D91AE54C6D008325C4 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		9669E9DC1AE54C6E008325C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9669E9DE1AE54C6E008325C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9669E9E11AE54C6E008325C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9669E9E71AE54C6E008325C4 /* PhunwareTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhunwareTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9669E9EC1AE54C6E008325C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9669E9ED1AE54C6E008325C4 /* PhunwareTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhunwareTestTests.m; sourceTree = "<group>"; };
+		9669E9F91AE54D68008325C4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = initialFiles/AppDelegate.h; sourceTree = "<group>"; };
+		9669E9FA1AE54D68008325C4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = initialFiles/AppDelegate.m; sourceTree = "<group>"; };
+		9669E9FC1AE54D83008325C4 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = class/DetailViewController.h; sourceTree = "<group>"; };
+		9669E9FD1AE54D83008325C4 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = class/DetailViewController.m; sourceTree = "<group>"; };
+		9669E9FE1AE54D83008325C4 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = class/MasterViewController.h; sourceTree = "<group>"; };
+		9669E9FF1AE54D83008325C4 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterViewController.m; path = class/MasterViewController.m; sourceTree = "<group>"; };
+		9669EA051AE54EB0008325C4 /* afnetworking */ = {isa = PBXFileReference; lastKnownFileType = folder; name = afnetworking; path = framework/afnetworking; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,15 +86,12 @@
 		9669E9CD1AE54C6D008325C4 /* PhunwareTest */ = {
 			isa = PBXGroup;
 			children = (
-				9669E9D21AE54C6D008325C4 /* AppDelegate.h */,
-				9669E9D31AE54C6D008325C4 /* AppDelegate.m */,
-				9669E9D51AE54C6D008325C4 /* MasterViewController.h */,
-				9669E9D61AE54C6D008325C4 /* MasterViewController.m */,
-				9669E9D81AE54C6D008325C4 /* DetailViewController.h */,
-				9669E9D91AE54C6D008325C4 /* DetailViewController.m */,
-				9669E9DB1AE54C6E008325C4 /* Main.storyboard */,
+				9669E9F71AE54D48008325C4 /* initialFiles */,
+				9669EA041AE54E71008325C4 /* model */,
+				9669EA031AE54E64008325C4 /* view */,
+				9669E9F81AE54D4D008325C4 /* controller */,
+				9669EA021AE54E1E008325C4 /* framework */,
 				9669E9DE1AE54C6E008325C4 /* Images.xcassets */,
-				9669E9E01AE54C6E008325C4 /* LaunchScreen.xib */,
 				9669E9CE1AE54C6D008325C4 /* Supporting Files */,
 			);
 			path = PhunwareTest;
@@ -122,6 +121,50 @@
 				9669E9EC1AE54C6E008325C4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9669E9F71AE54D48008325C4 /* initialFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9669E9F91AE54D68008325C4 /* AppDelegate.h */,
+				9669E9FA1AE54D68008325C4 /* AppDelegate.m */,
+			);
+			name = initialFiles;
+			sourceTree = "<group>";
+		};
+		9669E9F81AE54D4D008325C4 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				9669E9FC1AE54D83008325C4 /* DetailViewController.h */,
+				9669E9FD1AE54D83008325C4 /* DetailViewController.m */,
+				9669E9FE1AE54D83008325C4 /* MasterViewController.h */,
+				9669E9FF1AE54D83008325C4 /* MasterViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		9669EA021AE54E1E008325C4 /* framework */ = {
+			isa = PBXGroup;
+			children = (
+				9669EA051AE54EB0008325C4 /* afnetworking */,
+			);
+			name = framework;
+			sourceTree = "<group>";
+		};
+		9669EA031AE54E64008325C4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9669E9E01AE54C6E008325C4 /* LaunchScreen.xib */,
+				9669E9DB1AE54C6E008325C4 /* Main.storyboard */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		9669EA041AE54E71008325C4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +250,7 @@
 				9669E9DD1AE54C6E008325C4 /* Main.storyboard in Resources */,
 				9669E9E21AE54C6E008325C4 /* LaunchScreen.xib in Resources */,
 				9669E9DF1AE54C6E008325C4 /* Images.xcassets in Resources */,
+				9669EA061AE54EB0008325C4 /* afnetworking in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,10 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9669E9D41AE54C6D008325C4 /* AppDelegate.m in Sources */,
-				9669E9D71AE54C6D008325C4 /* MasterViewController.m in Sources */,
+				9669EA011AE54D83008325C4 /* MasterViewController.m in Sources */,
+				9669E9FB1AE54D68008325C4 /* AppDelegate.m in Sources */,
 				9669E9D11AE54C6D008325C4 /* main.m in Sources */,
-				9669E9DA1AE54C6D008325C4 /* DetailViewController.m in Sources */,
+				9669EA001AE54D83008325C4 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
