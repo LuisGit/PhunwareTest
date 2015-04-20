@@ -16,6 +16,8 @@
 		9669EA001AE54D83008325C4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669E9FD1AE54D83008325C4 /* DetailViewController.m */; };
 		9669EA011AE54D83008325C4 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669E9FF1AE54D83008325C4 /* MasterViewController.m */; };
 		9669EA061AE54EB0008325C4 /* afnetworking in Resources */ = {isa = PBXBuildFile; fileRef = 9669EA051AE54EB0008325C4 /* afnetworking */; };
+		9669EA0A1AE54F5E008325C4 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA091AE54F5E008325C4 /* Venue.m */; };
+		9669EA101AE551B9008325C4 /* VenueSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA0F1AE551B9008325C4 /* VenueSchedule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,10 @@
 		9669E9FE1AE54D83008325C4 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = class/MasterViewController.h; sourceTree = "<group>"; };
 		9669E9FF1AE54D83008325C4 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterViewController.m; path = class/MasterViewController.m; sourceTree = "<group>"; };
 		9669EA051AE54EB0008325C4 /* afnetworking */ = {isa = PBXFileReference; lastKnownFileType = folder; name = afnetworking; path = framework/afnetworking; sourceTree = "<group>"; };
+		9669EA081AE54F5E008325C4 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Venue.h; path = model/Venue.h; sourceTree = "<group>"; };
+		9669EA091AE54F5E008325C4 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Venue.m; path = model/Venue.m; sourceTree = "<group>"; };
+		9669EA0E1AE551B9008325C4 /* VenueSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VenueSchedule.h; path = model/VenueSchedule.h; sourceTree = "<group>"; };
+		9669EA0F1AE551B9008325C4 /* VenueSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VenueSchedule.m; path = model/VenueSchedule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,10 @@
 		9669EA041AE54E71008325C4 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				9669EA081AE54F5E008325C4 /* Venue.h */,
+				9669EA091AE54F5E008325C4 /* Venue.m */,
+				9669EA0E1AE551B9008325C4 /* VenueSchedule.h */,
+				9669EA0F1AE551B9008325C4 /* VenueSchedule.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -271,6 +281,8 @@
 				9669EA011AE54D83008325C4 /* MasterViewController.m in Sources */,
 				9669E9FB1AE54D68008325C4 /* AppDelegate.m in Sources */,
 				9669E9D11AE54C6D008325C4 /* main.m in Sources */,
+				9669EA0A1AE54F5E008325C4 /* Venue.m in Sources */,
+				9669EA101AE551B9008325C4 /* VenueSchedule.m in Sources */,
 				9669EA001AE54D83008325C4 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
