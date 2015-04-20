@@ -10,9 +10,11 @@
 
 @interface VenueSchedule : NSObject
 
+//Attributes
 @property (nonatomic, strong)NSDate *startDate;
 @property (nonatomic, strong)NSDate *endDate;
 
+//Methods
 -(id)initWithSchedule:(NSDate *)startDate endDate:(NSDate *)endDate;
 
 @end

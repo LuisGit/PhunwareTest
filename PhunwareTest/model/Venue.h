@@ -11,6 +11,7 @@
 
 @interface Venue : NSObject
 
+//Attributes
 @property (nonatomic,copy)NSString *venueName;
 @property (nonatomic,copy)NSString *venueDescription;
 @property (nonatomic,copy)NSString *city;
@@ -28,6 +29,11 @@
 @property (nonatomic,strong)NSNumber *longitude;
 
 @property (nonatomic, strong)NSMutableArray *schedule;
+
+//Methods
+-(id)initWithVenue:(NSString *)venueName venueDescription:(NSString *)venueDescription city:(NSString *)city state:(NSString *)state identificationNumber:(NSString *)identificationNumber tollFreePhone:(NSString *)tollFreePhone address:(NSString *)address imageUrl:(NSString *)imageUrl ticketUrl:(NSString *)ticketUrl pCode:(NSString *)pCode zipCode:(NSString *)zipCode phoneNumber:(NSString *)phoneNumber latitud:(NSNumber *)latitud longitude:(NSNumber *)longitude schedule:(NSArray *)schedule;
+
+
 /*
 "schedule": [
              {
