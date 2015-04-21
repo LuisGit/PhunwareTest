@@ -32,6 +32,7 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
+        [self.initialMessageLabel setHidden:YES];
         [self loadDetaiImage];
         [self loadDetailInfo];
         if ([self.detailItem.schedule count]>0) {
@@ -53,7 +54,7 @@
 }
 
 -(void)setupNavigationBar{
-    self.title = @"Details";
+    self.title = NSLocalizedString(@"Details", @"Details");
 }
 
 #pragma mark - Image
@@ -69,6 +70,7 @@
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
+    self.detailImage.backgroundColor = [UIColor grayColor];
     [self.detailImage setImageWithURLRequest:request
                             placeholderImage:nil
                                      success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
@@ -88,8 +90,8 @@
 #pragma mark - data
 -(void)loadDetailInfo{
     self.titleLabel.text = [self.detailItem venueName];
-    self.subTitle1.text = [self.detailItem address];
-    self.subTitle2.text = [NSString stringWithFormat:@"%@, %@ %@",[self.detailItem city], [self.detailItem state], [self.detailItem zipCode]];
+    self.subTitle1Label.text = [self.detailItem address];
+    self.subTitle2Label.text = [NSString stringWithFormat:@"%@, %@ %@",[self.detailItem city], [self.detailItem state], [self.detailItem zipCode]];
 }
 
 -(void)loadDetailSchedules{
@@ -111,7 +113,7 @@
         NSString *scheduleEntry = [NSString stringWithFormat:@"%@ to %@", fromDate, toDate];
         
         //find label location
-        float yPos = i * 20;
+        float yPos = i * 25;
         int width = [UIScreen mainScreen].bounds.size.width - 20;
         
         //Add label.
@@ -119,7 +121,7 @@
         fromLabel.text = scheduleEntry;
         fromLabel.numberOfLines = 1;
         fromLabel.baselineAdjustment = YES;
-        [fromLabel setFont:[UIFont systemFontOfSize:15.0f]];
+        [fromLabel setFont:[UIFont systemFontOfSize:self.subTitle2Label.font.pointSize]];
         //fromLabel.adjustsFontSizeToFitWidth = YES;
         fromLabel.clipsToBounds = YES;
         [self.scheduleWrapper addSubview:fromLabel];

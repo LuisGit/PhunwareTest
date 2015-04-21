@@ -17,24 +17,14 @@
 		9669EA011AE54D83008325C4 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669E9FF1AE54D83008325C4 /* MasterViewController.m */; };
 		9669EA0A1AE54F5E008325C4 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA091AE54F5E008325C4 /* Venue.m */; };
 		9669EA101AE551B9008325C4 /* VenueSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA0F1AE551B9008325C4 /* VenueSchedule.m */; };
-		9669EA511AE568FC008325C4 /* AFHTTPRequestOperation.h in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA3E1AE568FC008325C4 /* AFHTTPRequestOperation.h */; };
 		9669EA521AE568FC008325C4 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA3F1AE568FC008325C4 /* AFHTTPRequestOperation.m */; };
-		9669EA531AE568FC008325C4 /* AFHTTPRequestOperationManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA401AE568FC008325C4 /* AFHTTPRequestOperationManager.h */; };
 		9669EA541AE568FC008325C4 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA411AE568FC008325C4 /* AFHTTPRequestOperationManager.m */; };
-		9669EA551AE568FC008325C4 /* AFHTTPSessionManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA421AE568FC008325C4 /* AFHTTPSessionManager.h */; };
 		9669EA561AE568FC008325C4 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA431AE568FC008325C4 /* AFHTTPSessionManager.m */; };
-		9669EA571AE568FC008325C4 /* AFNetworking.h in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA441AE568FC008325C4 /* AFNetworking.h */; };
-		9669EA581AE568FC008325C4 /* AFNetworkReachabilityManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA451AE568FC008325C4 /* AFNetworkReachabilityManager.h */; };
 		9669EA591AE568FC008325C4 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA461AE568FC008325C4 /* AFNetworkReachabilityManager.m */; };
-		9669EA5A1AE568FC008325C4 /* AFSecurityPolicy.h in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA471AE568FC008325C4 /* AFSecurityPolicy.h */; };
 		9669EA5B1AE568FC008325C4 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA481AE568FC008325C4 /* AFSecurityPolicy.m */; };
-		9669EA5C1AE568FC008325C4 /* AFURLConnectionOperation.h in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA491AE568FC008325C4 /* AFURLConnectionOperation.h */; };
 		9669EA5D1AE568FC008325C4 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA4A1AE568FC008325C4 /* AFURLConnectionOperation.m */; };
-		9669EA5E1AE568FC008325C4 /* AFURLRequestSerialization.h in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA4B1AE568FC008325C4 /* AFURLRequestSerialization.h */; };
 		9669EA5F1AE568FC008325C4 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA4C1AE568FC008325C4 /* AFURLRequestSerialization.m */; };
-		9669EA601AE568FC008325C4 /* AFURLResponseSerialization.h in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA4D1AE568FC008325C4 /* AFURLResponseSerialization.h */; };
 		9669EA611AE568FC008325C4 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA4E1AE568FC008325C4 /* AFURLResponseSerialization.m */; };
-		9669EA621AE568FC008325C4 /* AFURLSessionManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA4F1AE568FC008325C4 /* AFURLSessionManager.h */; };
 		9669EA631AE568FC008325C4 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA501AE568FC008325C4 /* AFURLSessionManager.m */; };
 		9669EA6A1AE57D3F008325C4 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA691AE57D3F008325C4 /* Reachability.m */; };
 		9669EA6C1AE5857B008325C4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9669EA6B1AE5857B008325C4 /* SystemConfiguration.framework */; };
@@ -409,28 +399,18 @@
 				9669EA851AE60A73008325C4 /* UIProgressView+AFNetworking.m in Sources */,
 				9669EA841AE60A73008325C4 /* UIImageView+AFNetworking.m in Sources */,
 				9669EA6A1AE57D3F008325C4 /* Reachability.m in Sources */,
-				9669EA511AE568FC008325C4 /* AFHTTPRequestOperation.h in Sources */,
 				9669EA521AE568FC008325C4 /* AFHTTPRequestOperation.m in Sources */,
-				9669EA531AE568FC008325C4 /* AFHTTPRequestOperationManager.h in Sources */,
 				9669EA541AE568FC008325C4 /* AFHTTPRequestOperationManager.m in Sources */,
-				9669EA551AE568FC008325C4 /* AFHTTPSessionManager.h in Sources */,
 				9669EA811AE60A73008325C4 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				9669EA561AE568FC008325C4 /* AFHTTPSessionManager.m in Sources */,
 				9669EA871AE60A73008325C4 /* UIWebView+AFNetworking.m in Sources */,
-				9669EA571AE568FC008325C4 /* AFNetworking.h in Sources */,
 				9669EA801AE60A73008325C4 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				9669EA581AE568FC008325C4 /* AFNetworkReachabilityManager.h in Sources */,
 				9669EA821AE60A73008325C4 /* UIAlertView+AFNetworking.m in Sources */,
 				9669EA591AE568FC008325C4 /* AFNetworkReachabilityManager.m in Sources */,
-				9669EA5A1AE568FC008325C4 /* AFSecurityPolicy.h in Sources */,
 				9669EA5B1AE568FC008325C4 /* AFSecurityPolicy.m in Sources */,
-				9669EA5C1AE568FC008325C4 /* AFURLConnectionOperation.h in Sources */,
 				9669EA5D1AE568FC008325C4 /* AFURLConnectionOperation.m in Sources */,
-				9669EA5E1AE568FC008325C4 /* AFURLRequestSerialization.h in Sources */,
 				9669EA5F1AE568FC008325C4 /* AFURLRequestSerialization.m in Sources */,
-				9669EA601AE568FC008325C4 /* AFURLResponseSerialization.h in Sources */,
 				9669EA611AE568FC008325C4 /* AFURLResponseSerialization.m in Sources */,
-				9669EA621AE568FC008325C4 /* AFURLSessionManager.h in Sources */,
 				9669EA631AE568FC008325C4 /* AFURLSessionManager.m in Sources */,
 				9669EA011AE54D83008325C4 /* MasterViewController.m in Sources */,
 				9669E9FB1AE54D68008325C4 /* AppDelegate.m in Sources */,
@@ -646,6 +626,7 @@
 				9669E9F31AE54C6E008325C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9669E9F41AE54C6E008325C4 /* Build configuration list for PBXNativeTarget "PhunwareTestTests" */ = {
 			isa = XCConfigurationList;
@@ -654,6 +635,7 @@
 				9669E9F61AE54C6E008325C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -33,7 +33,9 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         self.clearsSelectionOnViewWillAppear = NO;
         self.preferredContentSize = CGSizeMake(320.0, 600.0);
+        
     }
+    [self checkOnlineAccess];
 }
 
 - (void)viewDidLoad {
@@ -46,15 +48,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    Reachability *reachability = [Reachability reachabilityWithHostname:kReachabilityTestURL];
-    reachability.reachableBlock = ^(Reachability *reachability) {
-        [self loadExternalData];
-    };
-    reachability.unreachableBlock = ^(Reachability *reachability) {
-        [self showMessageToUser:@"Connectivity" message:@"Please check your connection"];
-    };
-
-    [reachability startNotifier];
+    
     
 }
 
@@ -65,11 +59,24 @@
 
 #pragma mark - customization
 -(void)setupNavigationBar{
-    self.title = @"Sample App";
+    self.title = NSLocalizedString(@"Sample App", @"Sample App");
     [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithRed:25.0/255 green:25.0/255 blue:25.0/255 alpha:0]];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
+
+#pragma mark - Reachability
+-(void)checkOnlineAccess{
+    Reachability *reachability = [Reachability reachabilityWithHostname:kReachabilityTestURL];
+    reachability.reachableBlock = ^(Reachability *reachability) {
+        [self loadExternalData];
+    };
+    reachability.unreachableBlock = ^(Reachability *reachability) {
+        [self showMessageToUser:@"Connectivity" message:@"Please check your connection"];
+    };
+    
+    [reachability startNotifier];
 }
 
 
@@ -141,6 +148,7 @@
         self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
         self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
         controller.navigationItem.leftItemsSupplementBackButton = YES;
+        //self.splitViewController to
     }
 }
 
