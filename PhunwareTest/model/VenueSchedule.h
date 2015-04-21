@@ -16,5 +16,6 @@
 
 //Methods
 -(id)initWithSchedule:(NSDate *)startDate endDate:(NSDate *)endDate;
++(VenueSchedule *)scheduleWithDates:(NSString *)startDate endDate:(NSString *)endDate;
 
 @end

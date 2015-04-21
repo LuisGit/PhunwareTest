@@ -16,22 +16,24 @@
 @property (nonatomic,copy)NSString *venueDescription;
 @property (nonatomic,copy)NSString *city;
 @property (nonatomic,copy)NSString *state;
-@property (nonatomic,copy)NSString *identificationNumber;
+@property (nonatomic,copy)NSNumber *identificationNumber;
 @property (nonatomic,copy)NSString *tollFreePhone;
 @property (nonatomic,copy)NSString *address;
 @property (nonatomic,copy)NSString *imageUrl;
 @property (nonatomic,copy)NSString *ticketUrl;
-@property (nonatomic,copy)NSString *pCode;
-@property (nonatomic,copy)NSString *zipCode;
+@property (nonatomic,copy)NSNumber *pCode;
+@property (nonatomic,copy)NSNumber *zipCode;
 @property (nonatomic,copy)NSString *phoneNumber;
 
-@property (nonatomic,strong)NSNumber *latitud;
+@property (nonatomic,strong)NSNumber *latitude;
 @property (nonatomic,strong)NSNumber *longitude;
 
 @property (nonatomic, strong)NSMutableArray *schedule;
 
 //Methods
--(id)initWithVenue:(NSString *)venueName venueDescription:(NSString *)venueDescription city:(NSString *)city state:(NSString *)state identificationNumber:(NSString *)identificationNumber tollFreePhone:(NSString *)tollFreePhone address:(NSString *)address imageUrl:(NSString *)imageUrl ticketUrl:(NSString *)ticketUrl pCode:(NSString *)pCode zipCode:(NSString *)zipCode phoneNumber:(NSString *)phoneNumber latitud:(NSNumber *)latitud longitude:(NSNumber *)longitude schedule:(NSArray *)schedule;
+-(id)initWithVenue:(NSString *)venueName venueDescription:(NSString *)venueDescription city:(NSString *)city state:(NSString *)state identificationNumber:(NSNumber *)identificationNumber tollFreePhone:(NSString *)tollFreePhone address:(NSString *)address imageUrl:(NSString *)imageUrl ticketUrl:(NSString *)ticketUrl pCode:(NSNumber *)pCode zipCode:(NSNumber *)zipCode phoneNumber:(NSString *)phoneNumber latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude schedule:(NSArray *)schedule;
+
++(Venue *)parseVenueFromDictionary:(NSDictionary *)venuesDictionary;
 
 
 /*
