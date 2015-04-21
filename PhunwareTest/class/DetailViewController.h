@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subTitle1;
 @property (weak, nonatomic) IBOutlet UILabel *subTitle2;
+@property (weak, nonatomic) IBOutlet UIImageView *detailImage;
+@property (weak, nonatomic) IBOutlet UIView *scheduleWrapper;
+
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
