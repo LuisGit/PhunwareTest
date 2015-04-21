@@ -105,11 +105,11 @@
     
     for (int i=0; i< [self.detailItem.schedule count]; i++) {
         //Get all data
-        VenueSchedule *vs = [self.detailItem.schedule objectAtIndex:i];
+        VenueSchedule *venueSchedule = [self.detailItem.schedule objectAtIndex:i];
         
         //Format Dates
-        NSString *fromDate = [fromDateformatter stringFromDate:vs.startDate];
-        NSString *toDate = [toDateformatter stringFromDate:vs.endDate];
+        NSString *fromDate = [fromDateformatter stringFromDate:venueSchedule.startDate];
+        NSString *toDate = [toDateformatter stringFromDate:venueSchedule.endDate];
         NSString *scheduleEntry = [NSString stringWithFormat:@"%@ to %@", fromDate, toDate];
         
         //find label location

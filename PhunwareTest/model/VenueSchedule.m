@@ -20,7 +20,7 @@
 }
 
 +(VenueSchedule *)scheduleWithDates:(NSString *)startDate endDate:(NSString *)endDate{
-    VenueSchedule *vs = [[VenueSchedule alloc]init];
+    VenueSchedule *venueSchedule = [[VenueSchedule alloc]init];
     
     //Set the formatter for the coming date.
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
@@ -31,10 +31,10 @@
     [formatter setTimeZone:gmt];
     
     //Create the dates objects
-    vs.startDate = [formatter dateFromString:startDate];
-    vs.endDate = [formatter dateFromString:endDate];
+    venueSchedule.startDate = [formatter dateFromString:startDate];
+    venueSchedule.endDate = [formatter dateFromString:endDate];
     
-    return vs;
+    return venueSchedule;
 }
 
 

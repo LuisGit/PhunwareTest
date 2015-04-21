@@ -63,10 +63,10 @@
         NSString *endDate = [dateDict valueForKey:@"end_date"];
         
         //Create an schedule object
-        VenueSchedule *vs = [VenueSchedule scheduleWithDates:startDate endDate:endDate];
+        VenueSchedule *venueSchedule = [VenueSchedule scheduleWithDates:startDate endDate:endDate];
         
         //Add the new object to the venue item
-        [venueItem.schedule addObject:vs];
+        [venueItem.schedule addObject:venueSchedule];
     }
     
     return venueItem;

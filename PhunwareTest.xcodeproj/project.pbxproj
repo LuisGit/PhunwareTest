@@ -214,10 +214,10 @@
 		9669EA021AE54E1E008325C4 /* framework */ = {
 			isa = PBXGroup;
 			children = (
-				9669EA6B1AE5857B008325C4 /* SystemConfiguration.framework */,
 				9669EA641AE56970008325C4 /* AFNetworking */,
 				9669EA6E1AE60A01008325C4 /* UIKit+AFNetworking */,
 				9669EA671AE57D2B008325C4 /* reachability */,
+				9669EA6B1AE5857B008325C4 /* SystemConfiguration.framework */,
 			);
 			name = framework;
 			sourceTree = "<group>";
