@@ -122,7 +122,7 @@
         fromLabel.numberOfLines = 1;
         fromLabel.baselineAdjustment = YES;
         [fromLabel setFont:[UIFont systemFontOfSize:self.subTitle2Label.font.pointSize]];
-        //fromLabel.adjustsFontSizeToFitWidth = YES;
+        fromLabel.adjustsFontSizeToFitWidth = YES;
         fromLabel.clipsToBounds = YES;
         [self.scheduleWrapper addSubview:fromLabel];
     }
