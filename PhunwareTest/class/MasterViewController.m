@@ -46,12 +46,6 @@
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -60,10 +54,6 @@
 #pragma mark - customization
 -(void)setupNavigationBar{
     self.title = NSLocalizedString(@"Sample App", @"Sample App");
-    [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithRed:25.0/255 green:25.0/255 blue:25.0/255 alpha:0]];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 #pragma mark - Reachability
@@ -145,10 +135,8 @@
         Venue *object = self.objects[indexPath.row];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
         [controller setDetailItem:object];
-        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-        self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Back",@"Back") style:UIBarButtonItemStylePlain target:nil action:nil];
         controller.navigationItem.leftItemsSupplementBackButton = YES;
-        //self.splitViewController to
     }
 }
 

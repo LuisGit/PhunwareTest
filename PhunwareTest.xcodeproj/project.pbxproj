@@ -36,6 +36,7 @@
 		9669EA851AE60A73008325C4 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA7B1AE60A73008325C4 /* UIProgressView+AFNetworking.m */; };
 		9669EA861AE60A73008325C4 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA7D1AE60A73008325C4 /* UIRefreshControl+AFNetworking.m */; };
 		9669EA871AE60A73008325C4 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA7F1AE60A73008325C4 /* UIWebView+AFNetworking.m */; };
+		96C53BD01AE69D19000DDB9D /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C53BCF1AE69D19000DDB9D /* MainNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		9669EA7D1AE60A73008325C4 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "framework/afnetworking/UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		9669EA7E1AE60A73008325C4 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "framework/afnetworking/UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		9669EA7F1AE60A73008325C4 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "framework/afnetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		96C53BCE1AE69D19000DDB9D /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainNavigationController.h; path = class/MainNavigationController.h; sourceTree = "<group>"; };
+		96C53BCF1AE69D19000DDB9D /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainNavigationController.m; path = class/MainNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +205,8 @@
 				9669E9FD1AE54D83008325C4 /* DetailViewController.m */,
 				9669E9FE1AE54D83008325C4 /* MasterViewController.h */,
 				9669E9FF1AE54D83008325C4 /* MasterViewController.m */,
+				96C53BCE1AE69D19000DDB9D /* MainNavigationController.h */,
+				96C53BCF1AE69D19000DDB9D /* MainNavigationController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 				9669EA5B1AE568FC008325C4 /* AFSecurityPolicy.m in Sources */,
 				9669EA5D1AE568FC008325C4 /* AFURLConnectionOperation.m in Sources */,
 				9669EA5F1AE568FC008325C4 /* AFURLRequestSerialization.m in Sources */,
+				96C53BD01AE69D19000DDB9D /* MainNavigationController.m in Sources */,
 				9669EA611AE568FC008325C4 /* AFURLResponseSerialization.m in Sources */,
 				9669EA631AE568FC008325C4 /* AFURLSessionManager.m in Sources */,
 				9669EA011AE54D83008325C4 /* MasterViewController.m in Sources */,
