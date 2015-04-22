@@ -37,6 +37,7 @@
 		9669EA861AE60A73008325C4 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA7D1AE60A73008325C4 /* UIRefreshControl+AFNetworking.m */; };
 		9669EA871AE60A73008325C4 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669EA7F1AE60A73008325C4 /* UIWebView+AFNetworking.m */; };
 		96C53BD01AE69D19000DDB9D /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C53BCF1AE69D19000DDB9D /* MainNavigationController.m */; };
+		96C53BD41AE80191000DDB9D /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C53BD31AE80191000DDB9D /* APIManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		9669EA7F1AE60A73008325C4 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "framework/afnetworking/UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		96C53BCE1AE69D19000DDB9D /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainNavigationController.h; path = class/MainNavigationController.h; sourceTree = "<group>"; };
 		96C53BCF1AE69D19000DDB9D /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainNavigationController.m; path = class/MainNavigationController.m; sourceTree = "<group>"; };
+		96C53BD21AE80191000DDB9D /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIManager.h; path = class/api/APIManager.h; sourceTree = "<group>"; };
+		96C53BD31AE80191000DDB9D /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIManager.m; path = class/api/APIManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,7 @@
 				9669EA041AE54E71008325C4 /* model */,
 				9669EA031AE54E64008325C4 /* view */,
 				9669E9F81AE54D4D008325C4 /* controller */,
+				96C53BD11AE7FF77000DDB9D /* api */,
 				9669EA021AE54E1E008325C4 /* framework */,
 				9669E9DE1AE54C6E008325C4 /* Images.xcassets */,
 				9669E9CE1AE54C6D008325C4 /* Supporting Files */,
@@ -301,6 +305,15 @@
 			name = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		96C53BD11AE7FF77000DDB9D /* api */ = {
+			isa = PBXGroup;
+			children = (
+				96C53BD21AE80191000DDB9D /* APIManager.h */,
+				96C53BD31AE80191000DDB9D /* APIManager.m */,
+			);
+			name = api;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -423,6 +436,7 @@
 				9669E9D11AE54C6D008325C4 /* main.m in Sources */,
 				9669EA831AE60A73008325C4 /* UIButton+AFNetworking.m in Sources */,
 				9669EA861AE60A73008325C4 /* UIRefreshControl+AFNetworking.m in Sources */,
+				96C53BD41AE80191000DDB9D /* APIManager.m in Sources */,
 				9669EA0A1AE54F5E008325C4 /* Venue.m in Sources */,
 				9669EA101AE551B9008325C4 /* VenueSchedule.m in Sources */,
 				9669EA001AE54D83008325C4 /* DetailViewController.m in Sources */,

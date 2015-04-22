@@ -75,13 +75,11 @@
                             placeholderImage:nil
                                      success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
                                          self.detailImage.image = image;
-                                         [self.spinner setHidden:YES];
-                                         [self.spinner stopAnimating];
+                                         [self hideSpinner];
                                          
                                      } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error){
                                          NSLog(@"failed loading: %@", error);
-                                         [self.spinner setHidden:YES];
-                                         [self.spinner stopAnimating];
+                                         [self hideSpinner];
                                      }
      ];
 
@@ -103,6 +101,8 @@
     [toDateformatter setDateFormat:@"HH:mm a"];
     [toDateformatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
     
+    NSString *scheduleEntry = @"";
+    
     for (int i=0; i< [self.detailItem.schedule count]; i++) {
         //Get all data
         VenueSchedule *venueSchedule = [self.detailItem.schedule objectAtIndex:i];
@@ -110,22 +110,19 @@
         //Format Dates
         NSString *fromDate = [fromDateformatter stringFromDate:venueSchedule.startDate];
         NSString *toDate = [toDateformatter stringFromDate:venueSchedule.endDate];
-        NSString *scheduleEntry = [NSString stringWithFormat:@"%@ to %@", fromDate, toDate];
-        
-        //find label location
-        float yPos = i * 25;
-        int width = [UIScreen mainScreen].bounds.size.width - 20;
-        
-        //Add label.
-        UILabel *fromLabel = [[UILabel alloc]initWithFrame:CGRectMake(9, yPos, width, 20)];
-        fromLabel.text = scheduleEntry;
-        fromLabel.numberOfLines = 1;
-        fromLabel.baselineAdjustment = YES;
-        [fromLabel setFont:[UIFont systemFontOfSize:self.subTitle2Label.font.pointSize]];
-        fromLabel.adjustsFontSizeToFitWidth = YES;
-        fromLabel.clipsToBounds = YES;
-        [self.scheduleWrapper addSubview:fromLabel];
+        scheduleEntry = [NSString stringWithFormat:@"%@%@ to %@\n",scheduleEntry,fromDate, toDate];
     }
+    
+    //set schedules
+    self.scheduleWrapperTView.text = scheduleEntry;
 }
+
+#pragma mark - ui elements
+-(void)hideSpinner{
+    [self.spinner setHidden:YES];
+    [self.spinner stopAnimating];
+}
+
+
 
 @end

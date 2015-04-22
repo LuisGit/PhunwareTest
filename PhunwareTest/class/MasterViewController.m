@@ -8,17 +8,13 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
-
-#import "AFNetworking.h"
+#import "APIManager.h"
 #import "Reachability.h"
-
 #import "Venue.h"
 
 //Constants section
 #define kReachabilityTestURL @"www.google.com"
-#define kBaseURLString @"https://s3.amazonaws.com/jon-hancock-phunware/"
 #define kJsonURLSource @"nflapi-static.json"
-
 
 @interface MasterViewController ()
 
@@ -72,47 +68,13 @@
 
 #pragma mark - Data Methods
 -(void)loadExternalData{
-    NSString *string = [NSString stringWithFormat:@"%@%@", kBaseURLString, kJsonURLSource];
-    NSURL *url = [NSURL URLWithString:string];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-  
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    [operation.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    operation.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        //Get the string from the WS.
-        NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        //Encode string for non standard /exit characters
-        NSData *jsonData = [string dataUsingEncoding:NSUTF8StringEncoding];
-        
-        //Initialize error handler.
-        NSError *e;
-        NSArray *venuesArray = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&e];
-        NSLog(@"%@", venuesArray);
-        
-        [self parseVenuesData:venuesArray withCompletionHandler:^{
-            [self.tableView reloadData];
-        }];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        [self showMessageToUser:@"Error retrieving data" message:[error localizedDescription]];
-        
+    //call to API
+    [APIManager retrieveVenuesFromURL:kJsonURLSource success:^(id response) {
+        self.objects = (NSMutableArray *)response;
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        [self showMessageToUser:NSLocalizedString(@"Connection error",@"Connection error") message:[error localizedDescription]];
     }];
-    
-    //Start feed download
-    [operation start];
-}
-
--(void)parseVenuesData:(NSArray *)venuesArray withCompletionHandler:(void (^)(void))completionHandler{
-    // load only current values
-    self.objects = [[NSMutableArray alloc] init];
-    
-    for (NSDictionary *dict in venuesArray) {
-        //load values into array.
-        [self.objects addObject:[Venue parseVenueFromDictionary:dict]];
-    }
-    completionHandler();
 }
 
 #pragma mark - User Messages
