@@ -3,7 +3,9 @@ Readme
 This file has general information.
 
 3rd Party frameworks used:
-Using CocoaPods for handling frameworks versions / updates.
+Using CocoaPods for handling frameworks versions / updates. 
+Please run pod install to download dependencies.
+
 -AFNetworking: This library is used to retrieve efficiently different kind of resources from an end point / Api system. 
 In the case a feed changes it's format (JSON / XML / Others) it can be easy set up to handle new format.
 -Reachability: This library is used to let the system know if there's connectivity to the internet, 
