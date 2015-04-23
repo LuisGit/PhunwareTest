@@ -22,7 +22,7 @@
 @property (nonatomic,copy)NSNumber *id;
 @property (nonatomic,copy)NSString *tollfreephone;
 @property (nonatomic,copy)NSString *address;
-@property (nonatomic,copy)NSString <Optional> *image_url;
+@property (nonatomic,copy)NSString *image_url;
 @property (nonatomic,copy)NSString *ticket_link;
 @property (nonatomic,copy)NSNumber *pcode;
 @property (nonatomic,copy)NSNumber *zip;
