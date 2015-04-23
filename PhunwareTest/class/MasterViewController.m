@@ -19,7 +19,7 @@
 
 @interface MasterViewController ()
 
-@property NSMutableArray *objects;
+@property NSArray *objects;
 @property(strong) Reachability * googleReach;
 @end
 
@@ -73,7 +73,15 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [APIManager retrieveVenuesFromURL:kJsonURLSource success:^(id response) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
-        self.objects = (NSMutableArray *)response;
+        
+        //Sort the array.
+        NSSortDescriptor *nameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+        NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:nameDescriptor,nil];
+        
+        //load the array.
+        self.objects = [(NSMutableArray *)response sortedArrayUsingDescriptors:sortDescriptors];
+        
+        //load the tableview.
         [self.tableView reloadData];
     } failure:^(NSError *error) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
