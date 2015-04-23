@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "MBProgressHud.h"
 #import "APIManager.h"
 #import "Reachability.h"
 #import "Venue.h"
@@ -69,10 +70,13 @@
 #pragma mark - Data Methods
 -(void)loadExternalData{
     //call to API
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [APIManager retrieveVenuesFromURL:kJsonURLSource success:^(id response) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         self.objects = (NSMutableArray *)response;
         [self.tableView reloadData];
     } failure:^(NSError *error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         [self showMessageToUser:NSLocalizedString(@"Connection error",@"Connection error") message:[error localizedDescription]];
     }];
 }
@@ -116,8 +120,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     Venue *venue = self.objects[indexPath.row];
 
-    cell.textLabel.text = [venue venueName];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@, %@ %@", venue.address, venue.city, venue.state, venue.zipCode];
+    cell.textLabel.text = [venue name];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@, %@ %@", venue.address, venue.city, venue.state, venue.zip];
     return cell;
 }
 

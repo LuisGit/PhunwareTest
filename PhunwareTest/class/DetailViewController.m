@@ -7,7 +7,7 @@
 //
 
 #import "DetailViewController.h"
-#import "UIImageView+AFNetworking.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 
 #define kBackUpImageURL @"http://jackicarr.com/wp-content/uploads/2015/02/No_Image.png"
@@ -62,54 +62,58 @@
 -(void)loadDetaiImage{
     [self.spinner startAnimating];
     
-    NSString *urlString = self.detailItem.imageUrl;
+    self.detailImage.backgroundColor = [UIColor grayColor];
+    
+    //Build the url.
+    NSString *urlString = self.detailItem.image_url;
     if ([urlString length]<= 0) {
         urlString  = kBackUpImageURL;
     }
     
+    //load image
     NSURL *url = [NSURL URLWithString:urlString];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.detailImage sd_setImageWithURL:url completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        //remove activity indicator animation
+        self.detailImage.image = image;
+        [self hideSpinner];
+    }];
     
-    self.detailImage.backgroundColor = [UIColor grayColor];
-    [self.detailImage setImageWithURLRequest:request
-                            placeholderImage:nil
-                                     success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-                                         self.detailImage.image = image;
-                                         [self hideSpinner];
-                                         
-                                     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error){
-                                         NSLog(@"failed loading: %@", error);
-                                         [self hideSpinner];
-                                     }
-     ];
-
 }
 
 #pragma mark - data
 -(void)loadDetailInfo{
-    self.titleLabel.text = [self.detailItem venueName];
+    self.titleLabel.text = [self.detailItem name];
     self.subTitle1Label.text = [self.detailItem address];
-    self.subTitle2Label.text = [NSString stringWithFormat:@"%@, %@ %@",[self.detailItem city], [self.detailItem state], [self.detailItem zipCode]];
+    self.subTitle2Label.text = [NSString stringWithFormat:@"%@, %@ %@",[self.detailItem city], [self.detailItem state], [self.detailItem zip]];
 }
 
 -(void)loadDetailSchedules{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss ZZZ"];
+    
+    //Set the time zone
+    NSTimeZone *timeZone = [NSTimeZone timeZoneWithAbbreviation:@"GMT"];
+    [dateFormatter setTimeZone:timeZone];
+
+    //Set dates format
     NSDateFormatter *fromDateformatter = [[NSDateFormatter alloc]init];
     [fromDateformatter setDateFormat:@"EEEE dd/MM HH:mm a"];
-    [fromDateformatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+    [fromDateformatter setTimeZone:[NSTimeZone localTimeZone]];
     
     NSDateFormatter *toDateformatter = [[NSDateFormatter alloc]init];
     [toDateformatter setDateFormat:@"HH:mm a"];
-    [toDateformatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+    [toDateformatter setTimeZone:[NSTimeZone localTimeZone]];
     
     NSString *scheduleEntry = @"";
-    
     for (int i=0; i< [self.detailItem.schedule count]; i++) {
-        //Get all data
+        //Get all schedules
         VenueSchedule *venueSchedule = [self.detailItem.schedule objectAtIndex:i];
+        NSString *fromDateStr = venueSchedule.start_date;
+        NSString *toDateStr = venueSchedule.end_date;
         
         //Format Dates
-        NSString *fromDate = [fromDateformatter stringFromDate:venueSchedule.startDate];
-        NSString *toDate = [toDateformatter stringFromDate:venueSchedule.endDate];
+        NSString *fromDate = [fromDateformatter stringFromDate:[dateFormatter dateFromString:fromDateStr]];
+        NSString *toDate = [toDateformatter stringFromDate:[dateFormatter dateFromString:toDateStr]];
         scheduleEntry = [NSString stringWithFormat:@"%@%@ to %@\n",scheduleEntry,fromDate, toDate];
     }
     
