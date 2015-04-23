@@ -10,6 +10,10 @@ Please run pod install to download dependencies.
 In the case a feed changes it's format (JSON / XML / Others) it can be easy set up to handle new format.
 -Reachability: This library is used to let the system know if there's connectivity to the internet, 
 what kind of connectivity is it ( WIFI / GSM / 4G), and when it changes its state (Online / Offline).
+-JSONmodel: Transform Json feed into an entity.
+-MBProgressHUD: Spinner to show working activity.
+-SDWebImage: To download and cache images.
+
 
 iOS Target:
 -This app works in iOS 8 and iOS 7 devices.
