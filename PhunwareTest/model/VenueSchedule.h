@@ -7,15 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONModel.h"
 
-@interface VenueSchedule : NSObject
+@interface VenueSchedule : JSONModel
 
 //Attributes
-@property (nonatomic, strong)NSDate *startDate;
-@property (nonatomic, strong)NSDate *endDate;
-
-//Methods
--(id)initWithSchedule:(NSDate *)startDate endDate:(NSDate *)endDate;
-+(VenueSchedule *)scheduleWithDates:(NSString *)startDate endDate:(NSString *)endDate;
+@property (nonatomic, strong)NSString *start_date;
+@property (nonatomic, strong)NSString *end_date;
 
 @end
